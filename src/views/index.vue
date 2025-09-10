@@ -7,18 +7,9 @@
     <section class="mb-8">
       <h2 class="text-xl font-semibold">Quick Actions</h2>
       <div class="flex gap-4 mt-4">
-        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
-          @click="goTo('customers')">
-          View Customers
-        </button>
-        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
-          @click="goTo('leads')">
+        <Button>
           Manage Leads
-        </button>
-        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
-          @click="goTo('reports')">
-          View Reports
-        </button>
+        </Button>
       </div>
     </section>
     <section>
@@ -43,6 +34,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { Button } from '@/components/ui/button'
 
 const router = useRouter()
 function goTo(route: string) {
