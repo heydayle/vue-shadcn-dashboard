@@ -1,31 +1,40 @@
 <template>
-  <div class="home-page">
-    <header class="header">
-      <h1>Welcome to the CRM Dashboard</h1>
-      <p class="subtitle">Manage your customers, sales, and analytics in one place.</p>
+  <div class="max-w-3xl mx-auto p-8">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold">Welcome to the CRM Dashboard</h1>
+      <p class="text-gray-500 mt-2">Manage your customers, sales, and analytics in one place.</p>
     </header>
-    <section class="quick-actions">
-      <h2>Quick Actions</h2>
-      <div class="actions">
-        <button @click="goTo('customers')">View Customers</button>
-        <button @click="goTo('leads')">Manage Leads</button>
-        <button @click="goTo('reports')">View Reports</button>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold">Quick Actions</h2>
+      <div class="flex gap-4 mt-4">
+        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
+          @click="goTo('customers')">
+          View Customers
+        </button>
+        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
+          @click="goTo('leads')">
+          Manage Leads
+        </button>
+        <button class="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold transition-colors hover:bg-blue-700"
+          @click="goTo('reports')">
+          View Reports
+        </button>
       </div>
     </section>
-    <section class="overview">
-      <h2>Overview</h2>
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-value">128</span>
-          <span class="stat-label">Customers</span>
+    <section>
+      <h2 class="text-xl font-semibold">Overview</h2>
+      <div class="flex gap-8 mt-4">
+        <div class="bg-gray-100 p-6 rounded-lg text-center flex-1">
+          <span class="block text-2xl font-bold">128</span>
+          <span class="block text-gray-400 mt-2">Customers</span>
         </div>
-        <div class="stat">
-          <span class="stat-value">34</span>
-          <span class="stat-label">Leads</span>
+        <div class="bg-gray-100 p-6 rounded-lg text-center flex-1">
+          <span class="block text-2xl font-bold">34</span>
+          <span class="block text-gray-400 mt-2">Leads</span>
         </div>
-        <div class="stat">
-          <span class="stat-value">$12,400</span>
-          <span class="stat-label">Monthly Revenue</span>
+        <div class="bg-gray-100 p-6 rounded-lg text-center flex-1">
+          <span class="block text-2xl font-bold">$12,400</span>
+          <span class="block text-gray-400 mt-2">Monthly Revenue</span>
         </div>
       </div>
     </section>
@@ -36,75 +45,7 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-function goTo(route) {
+function goTo(route: string) {
   router.push({ name: route })
 }
 </script>
-
-<style scoped>
-.home-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.subtitle {
-  color: #666;
-}
-
-.quick-actions {
-  margin-bottom: 2rem;
-}
-
-.actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.actions button {
-  padding: 0.75rem 1.5rem;
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s;
-}
-
-.actions button:hover {
-  background: #1d4ed8;
-}
-
-.overview .stats {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.stat {
-  background: #f3f4f6;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  flex: 1;
-}
-
-.stat-value {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.stat-label {
-  color: #888;
-  margin-top: 0.5rem;
-  display: block;
-}
-</style>
