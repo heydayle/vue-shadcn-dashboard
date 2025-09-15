@@ -8,10 +8,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <span
-    data-slot="dropdown-menu-shortcut"
-    :class="cn('text-gray-500 ml-auto text-xs tracking-widest dark:text-gray-400', props.class)"
+  <h3
+    data-slot="card-title"
+    :class="cn('leading-none font-semibold', props.class)"
   >
     <slot />
-  </span>
+  </h3>
 </template>

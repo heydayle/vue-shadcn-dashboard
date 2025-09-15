@@ -1,7 +1,7 @@
 const authRoutes = [
   {
-    path: '/admin/login',
-    name: 'AdminLogin',
+    path: '/login',
+    name: 'Login',
     component: () => import('@/views/auth/AdminLogin.vue'),
     meta: {
       title: 'Admin Login'

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import ColorMode from '../share/ColorMode.vue'
+import Header from '../share/header/Header.vue'
 </script>
 
 <template>
   <div>
     <div>
-      <ColorMode />
+      <Header />
     </div>
     <div>
       <RouterView />
