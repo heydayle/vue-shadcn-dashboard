@@ -62,3 +62,48 @@ pnpm test:e2e --debug
 ```sh
 pnpm lint
 ```
+
+
+# structure
+
+```
+vue-shadcn-dashboard/
+├── .vscode/
+├── e2e/
+├── public/
+│    └── favicon.ico
+├── src/
+│ ├── tests/
+│ ├── assets/
+│ │     └── css/
+│ ├── components/
+│ │     ├── layouts/
+│ │     ├── share/
+│ │     ├── ui/
+│ │     └── vuebit/
+│ ├── lib/
+│ ├── router/
+│ ├── stores/
+│ ├── views/
+│ │     ├── auth/
+│ │     └── index.vue
+│ ├── App.vue
+│ └── main.ts
+├── README.md
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── .prettierrc.json
+├── components.json
+├── eslint.config.ts
+├── index.html
+├── jsrepo.json
+├── package.json
+├── playwright.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── tsconfig.vitest.json
+├── vite.config.ts
+└── vitest.config.ts
+```
